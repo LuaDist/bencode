@@ -1,0 +1,14 @@
+--- This file is part of LuaDist project
+
+name = "bencode"
+version = "2.0.1"
+
+desc = "Library for encoding and decoding bencoded data."
+author = "Kristofer Karlsso, Moritz Wilhelmy"
+license = "MIT/X11"
+url = "http://bitbucket.org/wilhelmy/lua-bencode/"
+maintainer = "Peter Drahoš"
+
+depends = {
+	"lua >= 5.1"
+}

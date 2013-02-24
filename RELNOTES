@@ -1,0 +1,37 @@
+2012-11-27  RELEASE-2.0.1  Moritz Wilhelmy <moritz@wzff.de>
+	The License has been changed to the same terms as Lua, rather than
+	public domain.
+
+2012-11-27  RELEASE-2.0  Moritz Wilhelmy <moritz@wzff.de>
+	This is the second release of lua-bencode.
+
+	API Changes:
+	* Instead of throwing errors all over the place, nil and an error message
+	  will be returned in case data can not be decoded or encoded.
+	  This means that calls to bencode functions no longer need to be wrapped
+	  in pcall(). You will need to check the return value instead.
+	  This change affects all users of the library and fixes issue #5.
+	  This API change is the reason why the major version number was bumped.
+
+	Fixed bugs:
+	* Most importantly, xopxe has reported and fixed a bug which prevented the
+	  decoding of negative integers. Thanks! (issue #7)
+	* package.seeall is no longer used. (fixes #3)
+	* A table is now used for encoding. This way, less garbage is
+	  produced. (fixes #6)
+
+	Note:
+	* An examples directory has been added. It currently contains a script to
+	  prettyprint .torrent files
+	* A silly testsuite has been added.
+
+	Caveat:
+	* Self- or cross-referencing tables can not be decoded. This was issue #4
+	  that came up in the announcement of the original release. It was not
+	  deemed utterly important, since people dealing with this kind of tables
+	  will probably have to check it anyway. As such, this decision reduces
+	  code duplication.
+
+2011-01-22	RELEASE-1
+	This is the first release of lua-bencode. It was actually released a bit
+	earlier, but this timestamp represents the date it was moved from luaforge.
