@@ -1,0 +1,20 @@
+# Note: Torrent files are not included in the test "suite". 
+# You can fetch a set of torrents for testing using e.g. one of the following
+# commands:
+#
+# 	grep '^[^#]' NOTE | xargs -n1 wget
+# 	grep '^[^#]' NOTE | xargs -n1 curl -O
+#
+# Then, run the tests (Bourne shell syntax):
+#
+#	export LUA_PATH='../?.lua'
+#	lua runtests.lua *.torrent
+#
+# Links to torrent files below (2012-08-03, so these may be stale and might no
+# longer work):
+#
+http://releases.ubuntu.com/12.04/ubuntu-12.04-alternate-amd64.iso.torrent
+http://ftp.netbsd.org/pub/NetBSD/iso/5.1.2/alphacd-5.1.2.iso.torrent
+http://cdimage.debian.org/debian-cd/6.0.5/armel/bt-cd/debian-6.0.5-armel-CD-1.iso.torrent
+http://torrent.fedoraproject.org/torrents/Fedora-17-i686-Live-Desktop.torrent
+http://centos.copahost.com/5.8/isos/i386/CentOS-5.8-i386-bin-DVD.torrent

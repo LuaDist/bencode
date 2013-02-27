@@ -1,0 +1,38 @@
+type = "x86_64"
+arch = "Ubuntu"
+author = "Kristofer Karlsso, Moritz Wilhelmy"
+depends = {
+[[lua >= 5.1]],
+}
+
+desc = "Library for encoding and decoding bencoded data."
+version = "2.0.1"
+maintainer = "Peter Drahoš"
+files = {
+Runtime = {
+[[lib/lua/bencode.lua]],
+}
+,
+Example = {
+[[share/bencode/example//dumptorrent.lua]],
+[[share/bencode/example//tracker.cgi]],
+}
+,
+Data = {
+[[share/bencode/COPYING]],
+[[share/bencode/RELNOTES]],
+[[share/bencode/README.markdown]],
+}
+,
+Test = {
+[[share/bencode/test//compare.lua]],
+[[share/bencode/test//runtests.lua]],
+[[share/bencode/test//NOTE]],
+[[share/bencode/test//neg_int.lua]],
+}
+,
+}
+
+license = "MIT/X11"
+name = "bencode"
+url = "http://bitbucket.org/wilhelmy/lua-bencode/"
